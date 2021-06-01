@@ -1,6 +1,6 @@
 import logging
 import os
-import cgi
+import html
 import traceback
 import base64
 from jadi import service
@@ -132,4 +132,4 @@ class CentralDispatcher(BaseHttpHandler):
                 <pre>%s</pre>
             </body>
         </html>
-        """ % (error_encoded, cgi.escape(stack))
+        """ % (error_encoded, html.escape(stack))
